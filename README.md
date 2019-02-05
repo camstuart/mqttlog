@@ -66,8 +66,8 @@ func init() {
 	opts := MQTT.NewClientOptions()
 	opts.AddBroker("tcp://localhost:1883")
 	opts.SetClientID(serviceID)
-	opts.SetUsername("ctrade")
-	opts.SetPassword("ctrade")
+	opts.SetUsername("myusername")
+	opts.SetPassword("password")
 
 	mqc = MQTT.NewClient(opts)
 	if token := mqc.Connect(); token.Wait() && token.Error() != nil {
