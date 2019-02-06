@@ -55,13 +55,11 @@ var (
 )
 
 func init() {
-
 	logFormatter := logging.MustStringFormatter(`%{color}%{time:15:04:05.000} %{program} %{shortfunc} %{level:.10s} %{id:03x}%{color:reset} %{message}`)
 	logging.SetFormatter(logFormatter)
 	consoleBackend := logging.NewLogBackend(os.Stdout, "", 0)
 	consoleBackend.Color = true
 	logging.SetLevel(logging.INFO, "main")
-	logging.SetBackend(consoleBackend)
 
 	opts := MQTT.NewClientOptions()
 	opts.AddBroker("tcp://localhost:1883")
