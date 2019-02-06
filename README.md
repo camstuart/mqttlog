@@ -83,7 +83,7 @@ func init() {
 func main() {
 	defer mqc.Disconnect(250)
 	logger.Info("test INFO log message")
-	logger.Debug("test INFO log message")
-	logger.Warning("test WARN log message")
+	logger.Debug("test DEBUG log message")
+	logger.Warning("test WARNING log message")
 }
 ```
